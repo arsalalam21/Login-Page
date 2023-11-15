@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>Animated Login Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(img/mountain\ lake.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            height: 530px;
+            background: transparent;
+            border-radius: 20px;
+            border: 2px solid rgba(257, 257, 257, 0.7);
+            backdrop-filter: blur(20px);        /* USE FOR BLURRING THE IMAGES AND MANAGES LIKE OVERFLOW:HIDDEN; ETC */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .main{
+            padding: 50px;
+            width: 100%;
+        }
+        .main h1{
+            text-align: center;
+            font-size: 42px;
+            font-weight: bolder;
+            color: white;
+            font-family: 'Roboto', sans-serif;    
+        }
+        .input{
+            position: relative;
+            height: 52px;
+            width: 100%;
+            border-bottom: 2px solid white;
+            margin: 32px 0;
+        }
+        .input label{
+            position: absolute;
+            top: 50%;
+            left: 6px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            transition: all ease .40s;
+        }
+        .input input{
+            height: 100%;
+            width: 100%;
+            background: transparent;
+            font-size: 17px;
+            font-weight: 600;
+            color: white;
+            padding: 0 30px 0 6px;
+        }
+        .input i{
+            position: absolute;
+            right: 9px;
+            font-size: 20px;
+            color: white;
+            line-height: 55px;
+        }
+        .input input:focus~label,
+        .input input:valid~label{
+            top: -3px;                      /* FOR ANIMATION OR EMAIL AND PASSWORD */
+        }
+        .check{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            margin: -10px 0 15px;
+        }
+        .check label input{
+            vertical-align: middle;
+            margin-right: 6px;
+            accent-color: white;
+        }
+        .check a{
+            color: white;
+        }
+        .check a:hover{
+            text-decoration: underline;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            background: white;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #000000;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .register{
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 35px 0 10px;
+        }
+        .register p a{
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            margin-left: 5px;
+        }
+        .register p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form action="">
+            <h1>Log In</h1>
+                <div class="input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+
+                <div class="input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+
+                <div class="check">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="#">Forget Password?</a>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+
+                <div class="register">
+                    <p>Don't have an account?<a href="#">Sign Up</a></p>
+                </div>
+  
+            </form>
+        </div>
+    </div>
+</body>
+</html>
